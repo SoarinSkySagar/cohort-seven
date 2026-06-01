@@ -271,3 +271,21 @@ The goal is to enable this impactful feature by default. To achieve that, Merkle
 - [Grandine](https://github.com/grandinetech/grandine) / [Teku](https://github.com/Consensys/teku): Start here if you want to buidl the existing Altair [light client sync protocol](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/light-client/sync-protocol.md) from scratch.
 - [Lighthouse](https://github.com/sigp/lighthouse) / [Lodestar](https://github.com/ChainSafe/lodestar) / [Prysm](https://github.com/OffchainLabs/prysm): Start here if interested in expanding an implementation with support for [light client data backfill](https://github.com/status-im/nimbus-eth2/pull/8445), and [decentralized checkpoint sync](https://github.com/etan-status/consensus-specs/commit/lc-snapsync) (early drafts).
 - [Nimbus](https://github.com/status-im/nimbus-eth2): Represented by myself, focusing on specs and contributing an implementation alongside yours.
+
+### Nimbus CL: Erb e2store archival files
+
+By Nimbus
+
+Era and other [e2store](https://github.com/eth-clients/e2store-format-specs/) files provide historical data for Ethereum's consensus and execution layers. This project should provide an implementation of [Erb](https://github.com/eth-clients/e2store-format-specs/pull/19) files for the Nimbus CL. Akin to how era files preserve blocks, Erb files preserve blob and data availability history since Dencun. Since the spec has not yet been finalized, findings may feed back into spec improvements.
+
+### Nimbus EL/CL: Rest-SSZ engine API implementation on EL and CL
+
+By Nimbus
+
+An alternative [REST-SSZ](https://github.com/ethereum/execution-apis/pull/793)-based engine API has been proposed. This project involves exploring implementation of this for either or both of the Nimbus EL and CL. This involves ensuring that either or both of the EL and CL can uniformly handle both the existing JSON-RPC and the REST-SSZ engine APIs across different clients/servers and testing interoperability with other extant implementations.
+
+### Nimbus CL: FOCIL (EIP-7805)
+
+By Nimbus
+
+FOCIL has been planned for the upcoming Hegotá fork. This project aims to contribute to the Nimbus CL's FOCIL design, implementation, and testing, including participating in upcoming FOCIL devnets and testnets. This is largely specified, in particular, as part of [Heze](https://github.com/ethereum/consensus-specs/tree/master/specs/heze). Aspects include the beacon chain implementations, managing the inclusion lists, gossip validation on inclusion lists, producing and disseminating blocks referencing inclusion lists, and handling network health-based fallback scenarios.
