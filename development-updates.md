@@ -20,20 +20,25 @@ Phase one is the very beginning of the cohort. The first few weeks are dedicated
 | [Cristian](https://github.com/conache/)         | [ Update 0](https://hackmd.io/@conache/rywURItWzx)                                                  |        |        |
 | [Ifeoluwa](https://github.com/owanikin)         |                                                   | [ Update 1](https://hackmd.io/@ZpBFaS-NSO-5Xkdm4jwolg/BJO7iYpWMx)       |        |
 | [Daniel](https://github.com/perfogic)           | [Update 0](https://hackmd.io/@rY6uGs23RIKpNYTQc4mY_g/SkvmzE0Zfe)                                    |        |        |
+<<<<<<< HEAD
 | [Hans](https://github.com/vuonghuuhung)         | [Update 0](https://hackmd.io/@MGGIPJFQRji7reFhV68ydw/H11LIOBMfl)                                    |        |        |
+=======
+| [Ivan](https://github.com/IvanAnishchuk)        | [Update 0](https://ivananishchuk.github.io/eth-protocol-fellowship/updates/2026-06-17-week-0/)      |        |        |
+>>>>>>> main
 | [Jack CC](https://github.com/JackCC703/)        | [Update 0](https://hackmd.io/@jackcc/epf7-week0)                                                    |        |        |
 | [Jeff](https://www.github.com/jeffoodchain)     | [Update 0](https://hackmd.io/BEM-xj5dRBeh3MGHYIvYeQ)                                                |        |        |
 | [Josh](https://github.com/JO-OLADEJI)           | [Update 0](https://hackmd.io/@hiOAMmPVSB6rKJF3A0TJIA/By6GJsnZGx)                                    |        |        |
 | [Keshav](https://www.github.com/keshavsharma25) | [Update 0](https://hackmd.io/@keshav0x/SJpIr3UWfl)                                                  |        |        |
 | [Kris](https://github.com/krisoshea-eth/)       | [Update 0](https://hackmd.io/@krisos/rJZ18M_-fg)                                                    |        |        |
-| [Kimi](https://github.com/KimiWu123)            | [Update 0](https://hackmd.io/@kimiwu/Bk3E5QRWzl)                                                    |        |        |
+| [Kimi](https://github.com/KimiWu123)            | [Update 0](https://hackmd.io/@kimiwu/Bk3E5QRWzl)                                                    | [Update 1](https://hackmd.io/@kimiwu/rJ432fGzfx)       |        |
 | [Mario](https://github.com/taxmeifyoucan/)      | [ Update 0](https://notes.ethereum.org/@MarioHavel/week0)                                           |        |        |
-| [Marko](https://github.com/markolazic01)        | [Update 0](https://hackmd.io/@lqzic/week-0-update)                                                  |        |        |
+| [Marko](https://github.com/markolazic01)        | [Update 0](https://hackmd.io/@lqzic/week-0-update)                                                  | [Update 1](https://hackmd.io/@lqzic/week-1-update)       |        |
 | [Meek](https://github.com/mmsaki)               | [Update 0](https://hackmd.io/@YBDu_chCTnKXFnYTkux9tQ/HJ5Rqa1zzx)                                     | [Update 1](https://hackmd.io/@YBDu_chCTnKXFnYTkux9tQ/rJvMCpJzfg) |        |
 | [Mohit](https://github.com/groverInnovate)      | [Update 0](https://hackmd.io/@groverInnovate/EPF7_Week0)                                            |        |        |
 | [Parth](https://github.com/ParthSinghPS)        | [Update 0](https://hackmd.io/@ParthSinghPS/HJMWUn6xzg)                                              |        |        |
 | [Rahul](https://github.com/rahulbarmann/)       | [Update 0](https://hackmd.io/@8t0zzURJSC6IX5BOuOiGqQ/Sk0vwhHZfg)                                    |        |        |
 | [Richard](https://github.com/richardgreg)      | [Update 0](https://richardgreg.github.io/ethereum-protocol-fellowship/2026/06/10/week-0.html)        |        |        |
+| [Roheemah](https://github.com/AbolareRoheemah)      |        | [Update 1](https://hackmd.io/@rhorheeymarh/HJuU07XGfl)       |        |
 | [Sagar](https://www.github.com/SoarinSkySagar)  | [Update 0](https://hackmd.io/@5d9IS104QYmhm-pr1ypNJg/Bk3xoWQbGg)                                    |        |        |
 | [Tosin](https://www.github.com/tosynthegeek)    | [Update 0](https://hackmd.io/@tosynthgeek/BJCL-EFbfe)                                               |        |        |
 | [Ray](https://github.com/rayjun)                | [Update 0](https://hackmd.io/@zBK5wwtLTrqYmlLNZd8CPA/HJKQsAi-Me)                                    |        |        |
