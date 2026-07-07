@@ -62,13 +62,6 @@ Phase one is the very beginning of the cohort. The first few weeks are dedicated
 
 With the gained insight into the protocol, the following weeks serve as a deep dive into a chosen topic. Read about [proposed projects](/projects/project-ideas.md) and choose one to dive into. By the first month, you should finish the initial research about a specific problem and propose a project, including a roadmap. Get some ideas from the [project proposal template](projects/project-template.md).
 
-| Name/GH | Week 3 | Week 4 | Week 5 | Project Proposal |
-| ------- | ------ | ------ | ------ | ---------------- |
-
-## Phase 3: Execution
-
-The actual project development is the main part of the program. Post your regular progress updates here during the development phase, share your issues and successes with others.
-
 | Name/GH                                              | Week 3                                           | Week 4 | Week 5 | Project Proposal |
 | ---------------------------------------------------- | ------------------------------------------------ | ------ | ------ | ---------------- |
 | [Aarish](https://github.com/aarishnaiyer)            |                                                  |        |        |                  |
@@ -108,7 +101,7 @@ The actual project development is the main part of the program. Post your regula
 | [Richard](https://github.com/richardgreg)            |                                                  |        |        |                  |
 | [Ritesh](https://github.com/Dyslex7c)                |                                                  |        |        |                  |
 | [Roheemah](https://github.com/AbolareRoheemah)       | [Update 3](https://hackmd.io/@rhorheeymarh/HJaGVJYQMe) |        |        |                  |
-| [Sagar](https://www.github.com/SoarinSkySagar)       |                                                  |        |        |                  |
+| [Sagar](https://www.github.com/SoarinSkySagar)       | [Update 3](https://hackmd.io/@SoarinSkySagar/r1ieE-u7Ml) |        |        |                  |
 | [Sahil](https://github.com/Sahilgill24)              |                                                  |        |        |                  |
 | [Sameer](https://github.com/SamAg19)                 |                                                  |        |        |                  |
 | [Soham](https://github.com/zemse)                    | [Update 3](https://hackmd.io/@zemse/r1dqoWK7Gx)  |        |        |                  |
@@ -118,6 +111,17 @@ The actual project development is the main part of the program. Post your regula
 | [Vansh](https://github.com/vanshsahay)               | [Update 3](https://hackmd.io/@vanshsahay/Bk1rs4GXGx) |        |        |                  |
 | [Vivek Singh Solanki](https://github.com/vivek-0509) |                                                  |        |        |                  |
 | [Zidan](https://github.com/mzf11125)                 |                                                  |        |        |                  |
+
+
+
+## Phase 3: Execution
+
+The actual project development is the main part of the program. Post your regular progress updates here during the development phase, share your issues and successes with others.
+
+
+| Name/GH | Week 6 | Week 7 | Week 8 | Week 9 | Week 10 | Week 11 | Week 12 | Week 13 | Week 14 | Week 15 | Week 16 | Week 17 | Week 18 | Week 19 | Week 20 | Week 21 + |
+| ------- | ------ | ------ | ------ | ------ | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | --------- |
+|         |        |        |        |        |         |         |         |         |         |         |         |         |         |         |         |           |
 
 ## Cohort end
 
