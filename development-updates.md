@@ -87,7 +87,7 @@ With the gained insight into the protocol, the following weeks serve as a deep d
 | [Josh](https://github.com/JO-OLADEJI)                |                                                                  |        |        |                  |
 | [Kapil](https://github.com/Kapil-K-Kathiriya)        |                                                                  |        |        |                  |
 | [Keshav](https://www.github.com/keshavsharma25)      |                                                                  |        |        |                  |
-| [Kimi](https://github.com/KimiWu123)                 | [Update 3](https://hackmd.io/@kimiwu/r1rDNxSmMx)                 |        |        |                  |
+| [Kimi](https://github.com/KimiWu123)                 | [Update 3](https://hackmd.io/@kimiwu/r1rDNxSmMx)                 | [Update 4](https://hackmd.io/@kimiwu/SJWLTf1Efx)  |        |                  |
 | [Kris](https://github.com/krisoshea-eth/)            | [Update 3](https://hackmd.io/@krisos/BkiFy_KXMx)                 |        |        |                  |
 | [Mario](https://github.com/taxmeifyoucan/)           |                                                                  |        |        |                  |
 | [Marko](https://github.com/markolazic01)             | [Update 3](https://hackmd.io/@lqzic/week-3-update)               |        |        |                  |
