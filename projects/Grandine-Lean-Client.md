@@ -4,11 +4,7 @@ High-Performance Rust Implementation of Ethereum's Lean Consensus Client
 
 ## Motivation
 
-Lean Ethereum is a full redesign of Ethereum's consensus, data, and execution layers, Ethereum's most ambitious protocol overhaul since the Merge. Its consensus piece, Lean Consensus, replaces the Beacon Chain design with one built around post-quantum security: current BLS signatures rely on elliptic-curve math that a sufficiently powerful quantum computer could eventually break, so Lean Consensus moves to hash-based signature schemes that stay secure against both classical and quantum adversaries. These hash-based primitives are SNARK-friendly, enabling efficient proof aggregation, so the same building block covers both quantum-resistance and performance.
-
-Grandine is a lean client developed by Grandine beacon client developers for connecting to Lean Ethereum and contributing to the consensus layer. Like the beacon client, the lean client is also written in Rust and prioritizes performance and efficiency over everything else. A few days back, the Grandine beacon client achieved top performance out of all the minority clients. The lean client aims to achieve a similar milestone.
-
-However, currently the Grandine client falls behind most of the other clients on [hive](https://hive.leanroadmap.org/?devnet=devnet5) on devnet 5 suites. With devnet 6 and devnet 7 also in the works, Grandine needs to catch up to the lean roadmap quickly.
+Grandine's lean client is built for Lean Ethereum's post-quantum consensus layer and currently trails most other implementations on devnet5 (per [hive](https://hive.leanroadmap.org)), despite Grandine's beacon client recently topping minority-client performance benchmarks. The gap needs to be closed before devnet 6 and devnet 7 as a high priority target for the lean client.
 
 ## Project description
 
@@ -16,35 +12,42 @@ The proposed work is a focused push to bring Grandine's Lean Client to spec and 
 
 ## Specification
 
-### 1. Gap analysis against hive suites
-- Run Grandine against the current [hive devnet suites](https://hive.leanroadmap.org/?devnet=devnet5) and categorize failures by subsystem: state transition, fork choice, signatures/aggregation, networking, sync, RPC.
-- Diff Grandine's [leanSpec](https://github.com/leanEthereum/leanSpec) STF implementation against spec and passing clients to isolate compliance gaps vs. bugs.
-- Produce a prioritized fix list on `grandinetech/lean`, ranked by hive suite impact.
+The following test suites have failing cases for Grandine on the hive dashboard:
 
-### 2. Implementation
-- Work on the ranked fix list and steadily increase the number of passing suites on the Hive roadmap
-- Keep an eye on performance benchmarks and ensure the "performance first" philosophy holds.
-
-### 3. Performance optimization and continuous validation
-- Profile via `lean-quickstart` and [leanBench](https://bench.leanroadmap.org/); apply Grandine's mainnet-proven performance patterns (parallelized validation, efficient SSZ hashing) where applicable.
-- Re-run hive suites and leanBench after each pass, and re-triage as devnet6/devnet7 (if available) specs land, tracking Grandine's hive ranking as the core progress signal.
+| Suite | Description | Current Status |
+|---|---|---|
+| client-interop | Cross-client interoperability checks | 4/52 |
+| rpc-compat | RPC API conformance | 28/34 |
+| reqresp | Req/Resp protocol messaging | 3/6 |
+| lean-spec-tests-fork-choice | Fork-choice spec conformance | 1/123 |
+| lean-spec-tests-state-transition | State-transition spec conformance | 13/74 |
+| lean-spec-tests-verify-signatures | Signature verification spec conformance | 0/3 |
+| Total | | 49/292 |
 
 ## Roadmap
 
-### Phase 0: Scoping and Understanding
+### Phase 0: Scoping and Understanding (week 6 - week 8)
 - Study more about the lean specs and new devnet specs, and compare with Grandine to understand current gaps.
 - Go through all suites on hive to understand failing suites
+- Run hive test suite for grandine locally and have a note ready with all the actual test failures.
+- Examine and solve the root cause of test suites exiting early for Grandine only
+- After phase 0, the hive dashboard should be very reliable for checking which suits are failing and need to be worked on.
+- Currently Grandine passes only 61 suites, however after this phase itself it can reach 100+ or even 200+ passing suites, since the hive workflow for Grandine itself is broken.
 
-### Phase 1: Implementation
-- Implement the missing diffs found in Phase 0, and ensure the relevant suites pass
+### Phase 1: Execution (week 8 - week 16)
+- After phase 0, we do not need to run hive tests locally and can depend on the hive dashboard, easing things up a lot.
+- In this phase the test suites are fixed, one by one.
+- The order of suites to be fixed can be decided during this phase, as the suites are not interdependent with a few exceptions
+- The highest priority will be given to making the tests pass successfully, which this phase focuses on.
+- Devnet 6 may land during this phase, hence some time will be needed to research onto that and prepare for interop testing on the new devnet.
 
-### Phase 2: Performance Optimization
-- Optimize implementations for better CPU and RAM performance under stress
+### Phase 2: Performance Optimization (week 16 - week 20)
+- Perform extensive interop tests with different clients and make a report on performance metrics (benchmarking)
+- Use tools like [leanBench](https://github.com/leanEthereum/leanBench) and [leanMetrics](https://github.com/leanEthereum/leanMetrics) to measure the performance and metrics while running.
+- Have discussions with grandine team and refactor code with more efficient version wherever applicable
 
-### Phase 3: Testing and Debugging
-- Extensive stress testing and seeing how the client holds under massive loads
-- Debug all issues found
-
+### Phase 3: Beyond EPF (week 20+)
+- Continue working on the lean client in the same way for future devnets
 
 ## Possible challenges
 
@@ -54,14 +57,11 @@ The proposed work is a focused push to bring Grandine's Lean Client to spec and 
 
 ## Goal of the project
 
-Success looks like Grandine's Lean Client passing >80% [hive interoperability suite](https://hive.leanroadmap.org/?devnet=devnet5) on par with the leading lean clients, sustained across the devnet5 → devnet6 → devnet7 (if available) progression rather than achieved once and left to regress.
+The goal of the project is to have Grandine catchup with the clients leading the lean client race. Passing 250+ test suite successes sounds like a really good point, as the top 4 clients right now are in the 250 - 300 range. That is the primary goal of the project. The secondary goal is to stick to Grandine's motto of being an efficient client.
 
-In scope by the end of the project:
-- All known spec-compliance gaps in state transition, fork choice, and signature/aggregation logic are resolved and verified against cross-client SSZ test vectors.
-- Grandine's metrics and networking stack are fully aligned with the ecosystem's shared conventions, so it participates in multi-client devnets and shared tooling (`lean-quickstart`, `leanpoint`, Grafana dashboards) without custom workarounds.
-- Performance optimizations are applied and benchmarked on [leanBench](https://bench.leanroadmap.org/), bringing Grandine's lean client closer to the performance profile of its mainnet counterpart.
+if devnet 6 gets introduced while work on the devnet 5 suites are still ongoing, then we would need to work on that too so that grandine can be in the top 4 clients for devnet 6-only specs from the starting. 
 
-The end state is a Grandine Lean Client that reliably interoperates with the rest of the multi-client lean ecosystem and is competitive on performance — closing the gap that currently exists on hive, and leaving the client in a state where continued devnet participation (rather than catch-up) is the norm. The broader impact is a more credible, diverse implementation contributing to client diversity on Ethereum's post-quantum consensus redesign at a stage where interop and performance issues are still cheap to fix.
+basically, the end state is a Grandine Lean Client that reliably interoperates with the rest of the multi-client lean ecosystem and is competitive on performance, closing the gap that currently exists on hive, and leaving the client in a state where continued devnet participation (rather than catch-up) is the norm. The broader impact is a more credible, diverse implementation contributing to client diversity on Ethereum's post-quantum consensus redesign at a stage where interop and performance issues are still cheap to fix.
 
 ## Collaborators
 
