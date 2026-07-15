@@ -7,3 +7,4 @@ To create a project, write your proposal based on [template](./project-template.
 ## Project proposals
 
 - [Lodestar EIP-7732 Builder](./lodestar-eip-7732-builder.md) - Kris O'Shea and Marko Lazic
+- [Pureth: Erigon SSZ Query Language](./Erigon-SSZ-Query-Language.md) - Sagar Rana
