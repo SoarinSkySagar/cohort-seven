@@ -68,6 +68,9 @@ Basically, the end state is a Grandine Lean Client that reliably interoperates w
 ### Fellows 
 
 * **Sagar Rana** ([@SoarinSkySagar](https://www.github.com/SoarinSkySagar))
+* **Sameer Agarwal** ([@SamAg19](https://github.com/SamAg19))
+
+We will be pursuing this work together and divide work as we see fit.
 
 ### Mentors
 
