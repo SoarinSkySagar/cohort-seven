@@ -24,6 +24,15 @@ The following test suites have failing cases for Grandine on the hive dashboard:
 | lean-spec-tests-verify-signatures | Signature verification spec conformance | 0/3 |
 | Total | | 49/292 |
 
+These suites can be divided into 3 categories: 
+1. single-client tests: These tests spin up a single node and probe them. `reqresp`, `rpc-compat` and `sync` tests are part of this category. These tests are the simplest to fix. However, the Hive dashboard shows exits early for these tests only. The fix for this category includes:
+   - Fix Hive dashboard setup
+   - Fix the failing suites
+2. client-interop: This test spins up multiple nodes and sets up a lean chain network to observe finality. The number of test cases is 4N<sup>2</sup> where N is the number of clients we are running. So, running all 7 clients will have 196 test cases and running a self-interop will have 4 cases.
+3. spec suites: The client exposes HTTP interface for test drivers which these tests call with pre-computed fixtures and compare final results with expected results. The setup for these tests are fine on hive, so any fixes to these tests will reflect on Hive as soon as the suites run again.
+
+Apart from the above test suites, there are issues with devnet5 scaling like finality stalling after 10000 slots which happens on an interop with all clients. There is currently no solution to this, so as soon as a solution is released it has to be implemented in Grandine. Similarly, there might be different issues arising during interop testing which would need fixing anytime a solution has been made public.
+
 ## Roadmap
 
 ### Phase 0: Scoping and Understanding (week 6 - week 8)
