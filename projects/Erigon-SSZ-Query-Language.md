@@ -1,4 +1,4 @@
-# Pureth: SSZ Query Language for Erigon
+# SSZ Query Language for Erigon
 
 Implementing SSZ Query Language on Erigon execution client with proofs
 
@@ -136,7 +136,7 @@ More detailed specs are available at [SSZ-QL specs for EL](https://hackmd.io/@So
 - Perform input validation on dummy data (since EL blocks are not SSZ encoded right now): verify the anchor is valid, every queried leaf is a descendant of its anchor, and each filter is valid for the leaf it targets
 
 ### Phase 2: Wire up the API to Execution Blocks (week 11 - week 14)
-- Ensure that [Pureth: Execution Blocks for Erigon](./) project is complete to a point where actual EL block data can be used
+- Ensure that [Erigon SSZ Execution Blocks and EIP-7807](./erigon-ssz-execution-blocks-eip-7807.md) project is complete to a point where actual EL block data can be used. We will be communicating regularly regarding our projects and the timelines so that it does not become a blocker to this project.
 - Resolve `{block_id}` (block hash, number, `latest`, `finalized`) to the corresponding execution block and its SSZ-typed objects.
 - Fetch the requested leaf values from Erigon's state for the compiled gindex set and return them (values-only, `include_proof=false`).
 - Apply filter evaluation and alias back-references (`$<alias>.index`) to narrow list/vector results to matching elements.
@@ -159,7 +159,7 @@ More detailed specs are available at [SSZ-QL specs for EL](https://hackmd.io/@So
 ## Possible challenges
 
 - Execution blocks are not implemented in Erigon right now, and this project depends on them. A delay in their implementation project may delay this project as well.
-- There is no formal EIP for SSZ-QL yet, so the specification may be unstable right now and could keep changing actively as requirements evolve.
+- There is no formal EIP for SSZ-QL yet, so I have my own proposal for that [here](https://hackmd.io/@SoarinSkySagar/rkwwvAMEzg). The specification may be unstable right now and could keep changing actively as requirements evolve.
 - A concrete method is needed for proving the correctness of filtered results.
 
 ## Goal of the project
@@ -188,6 +188,7 @@ The scope of this project is the SSZ-QL endpoint and proof generation within Eri
 ## Resources
 
 - [Erigon Execution Client](https://github.com/erigontech/erigon)
+- [Erigon SSZ Execution Blocks and EIP-7807](./erigon-ssz-execution-blocks-eip-7807.md)
 - [SSZ Specs](https://github.com/ethereum/consensus-specs/tree/master/ssz)
 - [SSZ-QL specs for EL](https://hackmd.io/@SoarinSkySagar/rkwwvAMEzg)
 - [Prysm SSZ Query Language implementation](https://github.com/OffchainLabs/prysm/issues/15587)
